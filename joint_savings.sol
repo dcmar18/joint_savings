@@ -26,8 +26,8 @@ contract JointSavings {
     - A variable of type `address public` named `lastToWithdraw`
     - Two variables of type `uint public` named `lastWithdrawAmount` and `contractBalance`.
     */
-    address payable account1;
-    address payable account2;
+    address payable accountOne;
+    address payable accountTwo;
     address public lastToWithdraw;
     uint public lastWithdrawAmount;
     uint public contractBalance;
@@ -43,7 +43,7 @@ contract JointSavings {
         Define a `require` statement that checks if the `recipient` is equal to either `accountOne` or `accountTwo`. The `requiere` statement returns the text `"You don't own this account!"` if it does not.
         */
  
-        require(recipient == account1 || recipient == account2, "You don't own this account!");
+        require(recipient == accountOne || recipient == accountTwo, "You don't own this account!");
  
         /*
         Define a `require` statement that checks if the `balance` is sufficient to accomplish the withdraw operation. If there are insufficient funds, the text `Insufficient funds!` is returned.
